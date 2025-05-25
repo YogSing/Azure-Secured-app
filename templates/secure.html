@@ -1,0 +1,29 @@
+{% block content %}
+<h2> Secure Page</h2>
+
+<p style="font-size: 22px;">This page demonstrates how to protect a web app using Azure AD authentication and RBAC.</p>
+
+
+
+<h4> Features Implemented </h4>
+<ul style="font-size: 22px;">
+    <li> This page will be secured using <strong>Azure AD Authentication</strong> (Easy Auth).</li>
+    <li> Only members of a specific <strong>Azure AD Group</strong> will be allowed access (RBAC).</li>
+    <li> Secrets like API keys will be stored in <strong>Azure Key Vault</strong>, accessed via <strong>Managed Identity</strong>.</li>
+</ul>
+
+
+
+<h4>Testing Instructions:</h4>
+<ol style="font-size: 22px;">
+    <li>Try accessing this page without signing in and  you'll be redirected to Azure AD login.</li>
+    <li>Only users in the authorized group can access it.</li>
+    <li>Secrets are pulled securely from Key Vault using the app’s identity.</li>
+</ol>
+
+
+
+<h4> Learning Outcome </h4>
+<p style="font-size: 22px;">This is part of my hands-on AZ-305 preparation: applying identity, access control, and secrets management to secure cloud apps on Azure.</p>
+{% endblock %}
+
