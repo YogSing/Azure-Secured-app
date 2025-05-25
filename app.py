@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/secure')
+@app.route('/identity')
 def secure():
     return render_template('secure.html')
 
