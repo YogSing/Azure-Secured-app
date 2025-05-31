@@ -16,29 +16,29 @@
 - GitHub for version control and deployment
 
 ## CMD to run app locally 
--  pip install -r requirements.txt
--  python app.py
+-  `pip install -r requirements.txt`
+-  `python app.py`
 
 ## Steps to configure Azure Resources 
-### Create App Services
-    1. Azure App Service: Create on the Azure portal and link to the GitHub repo
-    2. Startup Command: gunicorn --bind=0.0.0.0 --timeout 600 app:app
-    3. Identity: Enabled System Assigned Managed Identity for the App Service.
+  ### Create App Services
+   1. **Azure App Service**: Create on the Azure portal and link to the GitHub repo
+   2. **Startup Command**: `gunicorn --bind=0.0.0.0 --timeout 600 app:app`
+   3. **Identity**: Enabled System Assigned Managed Identity for the App Service.
   ### Azure AD Authentication Setup 
-    1. Go to Azure App Service > Authentication
+   1. Go to Azure App Service > Authentication
        - Enable Authentication
        - Add Microsoft Identity provider (Azure AD)
        - Link your app registration
   ### Role-Based Access Control 
-      - Create Azure AD group - CloudEngineer 
-      - Add the user to this group 
-      - Grant the Contributor role to this group
+   1. Create Azure AD group - `CloudEngineer` 
+   2. Add the user to this group 
+   3. Grant the Contributor role to this group
   ### App Role Assignment 
-      - Created app roles on the service principal and added a group to grant them access to the app
-      - Go to Enterprise applications>Find your app>Under Users and groups, click Add user/group>Select the AppAccessGroup>Assign the AppUser role.
+   1. Created app roles on the service principal and added a group to grant them access to the app
+   2. Go to Enterprise applications>Find your app>Under Users and groups, click Add user/group>Select the AppAccessGroup>Assign the AppUser role.
   ### Azure Key Vault Setup 
-      - Assign Key Vault Secrets User/Key Vault Crypto Officer to App's Managed Identity
-      - Create a Key Vault > Add Secrets 
-    
+   1. Assign `Key Vault Secrets User/Key Vault Crypto Officer` to App's Managed Identity
+   2. Create a Key Vault > Add Secrets 
+       
 
     
