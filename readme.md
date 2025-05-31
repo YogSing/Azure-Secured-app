@@ -16,8 +16,8 @@
 - GitHub for version control and deployment
 
 ## CMD to run app locally 
-- `pip install -r requirements.txt`
-- `python app.py`
+-  pip install -r requirements.txt
+-  python app.py
 
 ## Steps to configure Azure Resources 
   ### Create App Services
