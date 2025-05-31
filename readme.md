@@ -38,7 +38,8 @@
    2. Go to Enterprise applications>Find your app>Under Users and groups, click Add user/group>Select the AppAccessGroup>Assign the AppUser role.
   ### Azure Key Vault Setup 
    1. Assign `Key Vault Secrets User/Key Vault Crypto Officer` to App's Managed Identity
-   2. Create a Key Vault > Add Secrets 
+   2. Create a Key Vault > Add Secrets
+   3. Secure page is pulling secret password from Key Vault
        
 
     
