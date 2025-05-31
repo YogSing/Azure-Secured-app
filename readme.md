@@ -20,9 +20,9 @@
 -  python app.py
 
 ## Steps to configure Azure Resources 
-  ### Create App Services
+### Create App Services
     1. Azure App Service: Create on the Azure portal and link to the GitHub repo
-    2. Startup Command: `gunicorn --bind=0.0.0.0 --timeout 600 app:app`
+    2. Startup Command: gunicorn --bind=0.0.0.0 --timeout 600 app:app
     3. Identity: Enabled System Assigned Managed Identity for the App Service.
   ### Azure AD Authentication Setup 
     1. Go to Azure App Service > Authentication
